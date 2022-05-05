@@ -8,11 +8,13 @@ import Services from './component/Services';
 function App() {
   return (
     <>
-    <First/>
-    <Introduction/>
-    <Services/>
-    <Articles/>
-    <Footer/>
+      <main>
+        <First />
+        <Introduction />
+        <Services />
+        <Articles />
+        <Footer />
+      </main>
     </>
   );
 }

@@ -12,6 +12,7 @@ body {
   font-family: 'Public Sans', sans-serif;
   max-width: 1440px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 h1,
@@ -22,7 +23,7 @@ h3 {
 }
 
 ::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -68,6 +69,7 @@ button {
   margin: 20px;
   font-size: var(--Base-font);
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 button:hover {
@@ -118,12 +120,14 @@ button:hover {
   justify-content: space-between;
   height: fit-content;
   position: relative;
+  z-index: 20;
 }
 
 .header .logo-head {
   height: 50px;
   width: 150px;
   padding: 15px;
+  cursor: pointer;
 }
 
 nav {
@@ -131,12 +135,11 @@ nav {
   background-color: #fff;
   width: 100%;
   top: 70px;
-  background-color: aquamarine;
+  background-color:var(--Light-Grayish-Blue);
   transition: 0.2s ease;
   transform-origin: top;
   transition-delay: 0.1s;
   transform: scale(1, 0);
-  border-radius: 5px;
 }
 
 .header li {
@@ -158,6 +161,7 @@ nav {
   background-position: center;
   background-size: cover;
   margin-top: -150px;
+  z-index: 1;
 }
 
 .intro-hero img {
@@ -241,6 +245,7 @@ nav {
 .bottom-logo {
   margin: 20px;
   filter: invert(1);
+  cursor: pointer;
 }
 
 .social-links>* {
@@ -311,10 +316,12 @@ nav {
     transition: 0.2s;
     transform-origin: left;
   }
+  nav ul li:hover {
+    color: var(--Lime-Green);
+  }
 
   nav ul li:hover::after {
     width: 100%;
-
   }
 
   /* ---Intro section Desktop styling---- */
@@ -325,7 +332,7 @@ nav {
     align-items: center;
     flex-direction: row;
     padding-left: 100px;
-
+    margin-bottom: 0;
   }
 
   .intro-hero {
@@ -333,11 +340,11 @@ nav {
     background-position: calc(16%);
     background-size: cover;
     overflow: hidden;
+    transform: scale(1.25);
   }
 
   .intro-hero img {
     margin-right: -150px;
-
   }
 
   .intro-main {
@@ -347,10 +354,18 @@ nav {
 
   .intro-main h1 {
     font-weight: 400;
+    margin-left: 5px;
+  }
+  .intro-main button {
+    margin-left: 15px;
   }
 
-
   /* ---- service section Desktop styling here---- */
+
+  .services {
+    background-color: var(--Very-Light-Gray);
+  }
+
   .service-box {
     display: flex;
     padding: 0 100px;
@@ -382,6 +397,7 @@ nav {
 
   .articles-heading {
     padding: 0 100px;
+    
   }
 
   .art-heading-style {
@@ -416,6 +432,7 @@ nav {
 
   .art-section:hover {
     transform: scale(1.1);
+    background-color: var(--Light-Grayish-Blue);
   }
 
   /* ---- Lower Footer Desktop section styling---- */
